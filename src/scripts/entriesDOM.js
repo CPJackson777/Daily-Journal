@@ -1,3 +1,5 @@
+import entryManager from './entryComponent.js'
+
 /*
     Purpose: To render all journal entries to the DOM
 
@@ -15,4 +17,4 @@ const renderDom = {
   }
 }
 
-export default entriesDOM
+export default renderDom

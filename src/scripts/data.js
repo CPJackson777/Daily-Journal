@@ -5,4 +5,4 @@ const API = {
   }
 }
 
-export default data
+export default API
