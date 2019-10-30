@@ -21,7 +21,8 @@ const moodInput = document.querySelector('.mood')
 
 
 document.getElementById("record-entry").addEventListener("click", function(event) {
-    event.preventDefault()
-    console.log(dateInput.value)
+    // event.preventDefault() //or make sure button is outside of the form in index.html
+    console.log(dateInput.value, conceptInput.value, journalEntryInput.value, moodInput.value)
 })
 // Regarding line 16...any time you are adding an event listener to a button that is part of a form within index.html, you must add event.preventDefault() to the event listener because otherwise, the page will refresh and delete your console.log or whatever else you have in the event listener.
+
