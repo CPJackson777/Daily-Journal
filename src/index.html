@@ -16,25 +16,26 @@
     <form>
         <fieldset>
             <label for="date-input">Date of entry</label>
-            <input id='date-id' type="date" name="date-input">
+            <input id='date-id' type="date" name="date-input" required>
         </fieldset>
         <fieldset>
             <label for="concept-input">Concepts covered</label>
-            <input id='concept-id' type="text" name="concept-input">
+            <input id='concept-id' type="text" name="concept-input" required>
         </fieldset>
         <fieldset>
             <label for="entry-input">Journal entry</label>
-            <textarea id='journalentry-id' name="entry-input"></textarea>
+            <textarea id='journalentry-id' name="entry-input"></textarea required>
         </fieldset>
         <fieldset>
             <label for="mood-input">Mood</label>
-            <select class="mood" name="mood-input">
+            <select class="mood" name="mood-input" required>
                 <option value="Amazing">Amazing</option>
                 <option value="Great">Great</option>
                 <option value="Ok">Ok</option>
             </select>
         </fieldset>
     </form>
+
     <button id="record-entry">Record Journal Entry</button>
 
     <article class="entryLog">
