@@ -11,17 +11,27 @@ import renderDom from "./entriesDOM.js"
 
 
 API.getJournalEntries()
-.then(response => renderDom.renderJournalEntries(response))
+    .then(response => renderDom.renderJournalEntries(response))
 
 
-const dateInput = document.querySelector('#date-id')
-const conceptInput = document.querySelector('#concept-id')
-const journalEntryInput = document.querySelector('#journalentry-id')
-const moodInput = document.querySelector('.mood')
+const inputFactory = (date, concept, journalinput, mood) => {
+    return {
+        "date": date,
+        "concept": concept,
+        "entry": journalinput,
+        "mood": mood
+    }
+}
 
 
-document.getElementById("record-entry").addEventListener("click", function(event) {
-   
-    console.log(dateInput.value, conceptInput.value, journalEntryInput.value, moodInput.value)
+const postThis = document.getElementById("record-entry").addEventListener("click", function (event) {
+    const dateInput = document.querySelector('#date-id').value
+    const conceptInput = document.querySelector('#concept-id').value
+    const journalEntryInput = document.querySelector('#journalentry-id').value
+    const moodInput = document.querySelector('.mood').value
+    
+    console.log(inputFactory(dateInput, conceptInput, journalEntryInput, moodInput))
 })
+
+
 
