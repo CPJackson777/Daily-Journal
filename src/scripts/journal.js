@@ -30,8 +30,15 @@ const postThis = document.getElementById("record-entry").addEventListener("click
     const journalEntryInput = document.querySelector('#journalentry-id').value
     const moodInput = document.querySelector('.mood').value
     
-    console.log(inputFactory(dateInput, conceptInput, journalEntryInput, moodInput))
-})
+    const journalObject = inputFactory(dateInput, conceptInput, journalEntryInput, moodInput)
+    // console.log(journalObject)
 
+    
+    // POST.then(get).then(render)
+    API.saveJournalEntry(journalObject) //POST
+    .then(API.getJournalEntries) //GET
+    .then(response => renderDom.renderJournalEntries(response)) //RENDER
+    
+})
 
 
