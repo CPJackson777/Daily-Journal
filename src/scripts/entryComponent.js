@@ -7,9 +7,10 @@ const entryManager = {
         <h3>${journalEntry.concept}</h3>
         <p>${journalEntry.entry}</p>
         <p>${journalEntry.mood}</p>
-        <p>${journalEntry.date}</p>
-      </section>
-    `
+        <p>${journalEntry.date}</p>   
+    </section>
+
+      `
   }
 }
 

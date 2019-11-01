@@ -30,14 +30,24 @@
             <label for="mood-input">Mood</label>
             <select class="mood" name="mood-input" required>
                 <option value="Amazing">Amazing</option>
-                <option value="Great">Great</option>
+                <option value="Sad">Sad</option>
                 <option value="Ok">Ok</option>
             </select>
         </fieldset>
     </form>
-
+    
     <button id="record-entry">Record Journal Entry</button>
 
+    <fieldset>
+        <legend>Filter Journal Entries By Mood</legend>
+            <input type="radio" name="mood" value="Amazing">
+            <label for="mood-Amazing">Amazing</label>
+            <input type="radio" name="mood" value="Sad">
+            <label for="mood-Sad">Sad</label>
+            <input type="radio" name="mood" value="Ok">
+            <label for="mood-Ok">Ok</label>
+    </fieldset>   
+    
     <article class="entryLog">
 
     </article>
