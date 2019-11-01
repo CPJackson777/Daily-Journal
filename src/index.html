@@ -14,17 +14,18 @@
     <h1>Daily Journal</h1>
 
     <form>
-        <fieldset>
-            <label for="date-input">Date of entry</label>
-            <input id='date-id' type="date" name="date-input" required>
-        </fieldset>
-        <fieldset>
-            <label for="concept-input">Concepts covered</label>
-            <input id='concept-id' type="text" name="concept-input" required>
-        </fieldset>
-        <fieldset>
-            <label for="entry-input">Journal entry</label>
-            <textarea id='journalentry-id' name="entry-input"></textarea required>
+        <div>
+            <fieldset>
+                <label for="date-input">Date of entry</label>
+                <input id='date-id' type="date" name="date-input" required>
+            </fieldset>
+            <fieldset>
+                <label for="concept-input">Concepts covered</label>
+                <input id='concept-id' type="text" name="concept-input" required>
+            </fieldset>
+            <fieldset>
+                <label for="entry-input">Journal entry</label>
+                <textarea id='journalentry-id' name="entry-input"></textarea required>
         </fieldset>
         <fieldset>
             <label for="mood-input">Mood</label>
@@ -34,19 +35,28 @@
                 <option value="Ok">Ok</option>
             </select>
         </fieldset>
+        </div>
+        
+        <div>
+            <button id="record-entry">Record Journal Entry</button>
+        </div>
+    
+        <div class="mood">
+            <fieldset>
+                <legend>Filter Journal Entries By Mood</legend>
+        
+                    <input type="radio" id= "mood-Amazing" name="radio-mood" value="Amazing">
+                    <label for="mood-Amazing">Amazing</label>
+        
+                    <input type="radio" id= "mood-Sad" name="radio-mood" value="Sad">
+                    <label for="mood-Sad">Sad</label>
+        
+                    <input type="radio" id= "mood-Ok" name="radio-mood" value="Ok">
+                    <label for="mood-Ok">Ok</label>
+            </fieldset>  
+        </div> 
     </form>
     
-    <button id="record-entry">Record Journal Entry</button>
-
-    <fieldset>
-        <legend>Filter Journal Entries By Mood</legend>
-            <input type="radio" name="mood" value="Amazing">
-            <label for="mood-Amazing">Amazing</label>
-            <input type="radio" name="mood" value="Sad">
-            <label for="mood-Sad">Sad</label>
-            <input type="radio" name="mood" value="Ok">
-            <label for="mood-Ok">Ok</label>
-    </fieldset>   
     
     <article class="entryLog">
 
