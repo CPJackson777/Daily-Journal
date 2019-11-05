@@ -1,3 +1,5 @@
+import entryManager from './entryComponent.js'
+
 /*
     Purpose: To render all journal entries to the DOM
 
@@ -14,3 +16,13 @@ const renderDom = {
     logArticle.innerHTML = HtmlForAllEntries
   }
 }
+
+const dateInput = document.querySelector('#date-id')
+const conceptInput = document.querySelector('#concept-id')
+const journalEntryInput = document.querySelector('#journalentry-id')
+const moodInput = document.querySelector('.mood')
+
+
+
+export default renderDom
+
