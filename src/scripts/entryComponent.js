@@ -1,14 +1,16 @@
+//      This is the HTML design/layout of each individual journal entry. 
+//      It is written as a factory function.
+
 const entryManager = {
 
   makeJournalEntryComponent(journalEntry) {
-    // Create your own HTML structure for a journal entry
     return `
       <section>
         <h3>${journalEntry.concept}</h3>
         <p>${journalEntry.entry}</p>
         <p>${journalEntry.mood}</p>
         <p>${journalEntry.date}</p>
-        <button> Delete </button>
+        <button id="deleteEntry--${journalEntry.id}"> Delete </button>
       </section>
     `
   }
